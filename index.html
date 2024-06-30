@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gestão de despesas viagem</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" type="image/png" href="/assets/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="PWA">
+    <link rel="apple-touch-icon" sizes="29x29" href="/assets/29x29.png">
+    <link rel="apple-touch-icon" sizes="40x40" href="/assets/40x40.png">
+    <link rel="apple-touch-icon" sizes="80x80" href="/assets/80x80.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/120x120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/180x180.png">
+    <script>
+        navigator.serviceWorker.register('/sw.js')
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Gestão de Despesas em Viagens</h1>
+    </header>
+
+    <main>
+        <section id="formSection">
+            <form id="form">
+                <span style="display: none;" id="expenseId"></span>
+                <div>
+                    <div>
+                        <input placeholder="Descrição do item" id="description" required type="text">
+                    </div>
+                </div>
+    
+                <div>
+                  <input placeholder="Quantidade" id="amount" required type="number" >
+                </div>
+    
+                <div>
+                  <input placeholder="Valor" id="unitValue" required type="number" >
+                </div>
+    
+                <div required>
+                  <select placeholder="Moeda origem" id="originCurrency">
+                    <option>BRL</option>
+                    <option>USD</option>
+                  </select>
+                </div>
+    
+                <div required>
+                  <select placeholder="Moeda Destino" id="destinyCurrency">
+                    <option>BRL</option>
+                    <option>USD</option>
+                  </select>
+                </div>
+    
+                <div id="addButton">
+                  <a type="button" onclick="addExpense()">
+                    <span>Adicionar</span>
+                  </a>
+                </div>
+            </form>
+        </section>
+        <section id="expenses">
+
+        </section>
+        <section id="total">
+
+        </section>
+    </main>
+    <script src="gestao.js"></script>
+</body>
+
+</html>

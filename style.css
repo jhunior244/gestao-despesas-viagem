@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    line-height: 1.5rem;
+}
+
+html, body {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: fixed !important;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: #3ad0d0;
+    color: black;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    top: 4rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 7.5rem);
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    flex-flow: column;
+    align-items: center;
+}
+
+section > div {
+    display: flex;
+    width: 100%;
+}
+
+input {
+    width: 300px;
+    margin: 4px 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+select {
+    width: 319px;
+    margin: 4px 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+input, select {
+    box-shadow: 2px 2px 2px #269999;
+}
+
+#expenses {
+    display: flex;
+    margin: 12px 0;
+    width: 85%;
+    flex-flow: column;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 4px 12px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#expenses > div {
+    width: 100%;
+    margin: 6px 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#actions {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    max-width: 75px;
+}
+
+#form {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#addButton {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 8px 4px;
+}
+
+#addButton > a {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    background-color: #3ad0d0;
+    padding: 8px 24px;
+    width: 120px;
+    border-radius: 6px;
+}
+
+#total {
+    position: fixed;
+    bottom: 1.5rem; 
+}
+
+#total > div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+@media(max-width: 600px) {
+    #form {
+        display: flex;
+        flex-flow: column;
+        align-items: center
+    }
+}
+
